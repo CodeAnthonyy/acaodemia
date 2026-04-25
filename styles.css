@@ -1,7 +1,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #f5f0e8;
+  --bg: #ffffff;
   --card: #ffffff;
   --ink: #1a1208;
   --muted: #7a6e5f;
@@ -25,7 +25,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(245,240,232,0.98);
+  background: rgba(255,255,255,0.98);
   backdrop-filter: blur(12px);
   border-bottom: 1.5px solid var(--border);
   padding: 16px 40px;
