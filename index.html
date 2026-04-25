@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Acãodemia Pet — Academia Canina</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav>
+    <ul class="links-navegacao">
+      <li><a href="#" id="nav-home" class="ativa" onclick="showPage('home'); return false;">HOME</a></li>
+      <li><a href="#" id="nav-servicos" onclick="showPage('servicos'); return false;">SERVIÇOS</a></li>
+      <li><a href="#" id="nav-cadastro" onclick="showPage('cadastro'); return false;">CADASTRO</a></li>
+    </ul>
+    <button class="menu-hamburguer" id="hamburger" aria-label="Menu" onclick="toggleMobile()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+  <div class="menu-movel" id="mobile-menu">
+    <a href="#" id="mob-home" class="ativa" onclick="showPage('home'); toggleMobile(); return false;">HOME</a>
+    <a href="#" id="mob-servicos" onclick="showPage('servicos'); toggleMobile(); return false;">SERVIÇOS</a>
+    <a href="#" id="mob-cadastro" onclick="showPage('cadastro'); toggleMobile(); return false;">CADASTRO</a>
+  </div>
+
+  <!-- ===== PAGE: HOME ===== -->
+  <div id="page-home" class="pagina ativa">
+    <section class="heroi">
+      <div class="logo-heroi aparece-cima">
+        <img src="logo.jpeg" alt="Acãodemia Pet">
+      </div>
+      <h1 class="aparece-cima-2">O melhor para o seu <span>companheiro canino</span></h1>
+      <p class="aparece-cima-2">Transforme a saúde e o bem-estar do seu cão com exercícios especializados, acompanhamento profissional e muito diversão.</p>
+      <div class="botoes-heroi aparece-cima-3">
+        <a href="#" class="botao-primario" onclick="showPage('cadastro'); return false;">Agendar Aula Grátis</a>
+        <a href="#servicos" class="botao-secundario" onclick="showPage('servicos'); return false;">Ver Serviços</a>
+      </div>
+      <div class="hero-badges aparece-cima-3">
+        <div class="selo"><span class="icone-selo">🏅</span> Profissionais Certificados</div>
+        <div class="selo"><span class="icone-selo">❤️</span> +500 Pets Atendidos</div>
+        <div class="selo"><span class="icone-selo">🌟</span> 4.9 Estrelas</div>
+      </div>
+    </section>
+
+    <section class="secao" id="sobre">
+      <div class="cabecalho-secao">
+        <span class="tag-secao">Sobre nós</span>
+        <h2>Cuidamos do seu pet como <span>família</span></h2>
+        <p>Somos especializados em atividades físicas e mentais para cães de todas as idades e portes.</p>
+      </div>
+      <div class="grade-sobre">
+        <div class="texto-sobre">
+          <h3>Mais que uma academia, um <span>espaço de convivência</span></h3>
+          <p>Na Acãodemia Pet, acreditamos que cada cão merece atenção individualizada. Por isso, oferecemos programas personalizados que combinam exercício, socialização e entretenimento.</p>
+          <p>Nossa estrutura foi pensada para proporcionar segurança e conforto, com equipamentos adaptados e ambientes climatizados.</p>
+          <div class="estatisticas-sobre">
+            <div class="cartao-estatistica">
+              <div class="numero-estatistica">+500</div>
+              <div class="rotulo-estatistica">Pets Atendidos</div>
+            </div>
+            <div class="cartao-estatistica">
+              <div class="numero-estatistica">5+</div>
+              <div class="rotulo-estatistica">Anos de Experiência</div>
+            </div>
+          </div>
+        </div>
+        <div class="visual-sobre">
+          <span class="icone-grande">🐕</span>
+          <p>"Meu cão ganhou uma vida nova aqui. Volta feliz todos os dias!"</p>
+          <span class="autor">— Maria, tutora do Thor</span>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divisor">
+
+    <section class="secao" id="beneficios">
+      <div class="cabecalho-secao">
+        <span class="tag-secao">Por que escolher a Acãodemia?</span>
+        <h2>Benefícios que seu pet <span>merece</span></h2>
+        <p>Veja como podemos transformar a rotina do seu melhor amigo.</p>
+      </div>
+      <div class="grade-beneficios">
+        <div class="cartao-beneficio">
+          <span class="icone-beneficio">💪</span>
+          <h4>Física</h4>
+          <p>Exercícios adaptados para cada porte e idade, fortalecendo músculos e articulações.</p>
+        </div>
+        <div class="cartao-beneficio">
+          <span class="icone-beneficio">🧠</span>
+          <h4>Mental</h4>
+          <p>Atividades de estimulação cognitiva que mantêm a mente ativa e saudável.</p>
+        </div>
+        <div class="cartao-beneficio">
+          <span class="icone-beneficio">🐾</span>
+          <h4>Social</h4>
+          <p>Convívio com outros cães, desenvolvendo habilidades sociais e reduzindo ansiedade.</p>
+        </div>
+        <div class="cartao-beneficio">
+          <span class="icone-beneficio">🎯</span>
+          <h4>Comportamental</h4>
+          <p>Acompanhamento profissional para melhorar obediência e comportamento.</p>
+        </div>
+        <div class="cartao-beneficio">
+          <span class="icone-beneficio">❤️</span>
+          <h4>Cardiovascular</h4>
+          <p>Atividades que fortalecem o coração e melhoram a resistência do seu pet.</p>
+        </div>
+        <div class="cartao-beneficio">
+          <span class="icone-beneficio">😄</span>
+          <h4>Diversão</h4>
+          <p>Momentos de alegria e descontração que proporcionam bem-estar emocional.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divisor">
+
+    <section class="secao" id="localizacao">
+      <div class="cabecalho-secao">
+        <span class="tag-secao">Onde estamos</span>
+        <h2>Venha nos <span>visitar</span></h2>
+        <p>Estamos localizados em um espaço amplo e seguro para o seu pet.</p>
+      </div>
+      <div class="envoltoria-localizacao">
+        <div class="informacoes-localizacao">
+          <div class="detalhes-localizacao">
+            <h3>Acãodemia Pet</h3>
+            <div class="item-localizacao">
+              <span class="icone-localizacao">📍</span>
+              <div>
+                <strong>Endereço</strong>
+                <p>Rua Example, 123 - Bairro<br>São Paulo, SP</p>
+              </div>
+            </div>
+            <div class="item-localizacao">
+              <span class="icone-localizacao">🕐</span>
+              <div>
+                <strong>Horário</strong>
+                <p>Seg a Sex: 7h às 20h<br>Sáb: 8h às 18h</p>
+              </div>
+            </div>
+            <div class="item-localizacao">
+              <span class="icone-localizacao">📱</span>
+              <div>
+                <strong>WhatsApp</strong>
+                <p>(11) 99999-9999</p>
+              </div>
+            </div>
+          </div>
+          <div class="conteiner-mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197690722798!2d-46.65870258554344!3d-23.561696284680577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd63f3e4a5d6e1b0!2sAv.%20Paulista%2C%20São%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1640000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="chamada-inicial">
+      <h2>Pronto para transformar a vida do seu pet?</h2>
+      <p>Agende agora uma aula experimental gratuita e conheça nossa estrutura.</p>
+      <a href="#" class="botao-branco" onclick="showPage('cadastro'); return false;">Agendar Aula Grátis</a>
+    </div>
+  </div>
+
+  <!-- ===== PAGE: SERVIÇOS ===== -->
+  <div id="page-servicos" class="pagina">
+    <div class="heroi-servicos">
+      <h1>Nossos <span>Serviços</span></h1>
+      <p>Oferecemos diversas modalidades para atender às necessidades do seu pet.</p>
+    </div>
+    <div class="grade-servicos">
+      <div class="cartao-servico">
+        <span class="numero-servico">1</span>
+        <div class="envoltoria-icone-servico">🏃</div>
+        <div class="corpo-servico">
+          <h3>Natação</h3>
+          <p>Atividade de baixo impacto, ideal para pets com problemas articulares ou que adoram água. A natação fortalece músculos e melhora a resistência cardiovascular.</p>
+          <div class="tags-servico">
+            <span class="tag-servico">Musculação</span>
+            <span class="tag-servico">Cardio</span>
+          </div>
+        </div>
+      </div>
+      <div class="cartao-servico">
+        <span class="numero-servico">2</span>
+        <div class="envoltoria-icone-servico">🎾</div>
+        <div class="corpo-servico">
+          <h3>Agility</h3>
+          <p>Circuito de obstáculos que desenvolve coordenação, agilidade e concentração. Perfeito para cães que precisam gastar energia e aprender novos comandos.</p>
+          <div class="tags-servico">
+            <span class="tag-servico">Coordenação</span>
+            <span class="tag-servico">Equilíbrio</span>
+          </div>
+        </div>
+      </div>
+      <div class="cartao-servico">
+        <span class="numero-servico">3</span>
+        <div class="envoltoria-icone-servico">🐕</div>
+        <div class="corpo-servico">
+          <h3>Socialização</h3>
+          <p>Sessões em grupo onde seu pet interage com outros cães de forma supervisionada. Ideal para desenvolver habilidades sociais e reduzir comportamentos agressivos.</p>
+          <div class="tags-servico">
+            <span class="tag-servico">Convívio</span>
+            <span class="tag-servico">Comportamento</span>
+          </div>
+        </div>
+      </div>
+      <div class="cartao-servico">
+        <span class="numero-servico">4</span>
+        <div class="envoltoria-icone-servico">🧠</div>
+        <div class="corpo-servico">
+          <h3>Enriquecimento Ambiental</h3>
+          <p>Atividades que estimulam os sentidos e a mente do seu pet, prevenindo tédio e comportamentos destrutivos. Inclui jogos de busca e puzzles.</p>
+          <div class="tags-servico">
+            <span class="tag-servico">Estimulação</span>
+            <span class="tag-servico">Mental</span>
+          </div>
+        </div>
+      </div>
+      <div class="cartao-servico">
+        <span class="numero-servico">5</span>
+        <div class="envoltoria-icone-servico">🏋️</div>
+        <div class="corpo-servico">
+          <h3>Musculação</h3>
+          <p>Exercícios específicos para fortalecimento muscular, indicados para recuperação pós-cirúrgica ou prevenção de lesões. Equipamentos adaptados para cada porte.</p>
+          <div class="tags-servico">
+            <span class="tag-servico">Força</span>
+            <span class="tag-servico">Reabilitação</span>
+          </div>
+        </div>
+      </div>
+      <div class="cartao-servico">
+        <span class="numero-servico">6</span>
+        <div class="envoltoria-icone-servico">🎓</div>
+        <div class="corpo-servico">
+          <h3>Obediência</h3>
+          <p>Aulas de adestramento básico e avançado, focadas em comandos como sentar, deitar, ficar e caminhar sem coleira. Melhora a comunicação entre tutor e pet.</p>
+          <div class="tags-servico">
+            <span class="tag-servico">Educação</span>
+            <span class="tag-servico">Disciplina</span>
+          </div>
+        </div>
+      </div>
+      <div class="cartao-servico destaque">
+        <span class="numero-servico">★</span>
+        <div class="envoltoria-icone-servico">🌟</div>
+        <div class="corpo-servico">
+          <h3>Pacote Premium</h3>
+          <p>Plano completo que inclui natação, agility, socialização e enriquecimento ambiental. Ideal para quem busca o melhor para seu pet com acompanhamento personalizado e relatórios de evolução.</p>
+          <div class="tags-servico">
+            <span class="tag-servico">Completo</span>
+            <span class="tag-servico">Personalizado</span>
+            <span class="tag-servico">Relatório</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PAGE: CADASTRO ===== -->
+  <div id="page-cadastro" class="pagina">
+    <div class="pagina-cadastro">
+      <div class="cabecalho-cadastro">
+        <span class="pata">🐾</span>
+        <h1>Agende uma <span>aula experimental</span></h1>
+        <p>Preencha o formulário abaixo e entraremos em contato.</p>
+      </div>
+      <div class="cartao">
+        <form id="form">
+          <div class="titulo-secao-formulario">Dados do Pet</div>
+          <div class="linha">
+            <div class="campo">
+              <label for="nome_cao">Nome do cão *</label>
+              <input type="text" id="nome_cao" name="nome_cao" required>
+            </div>
+            <div class="campo">
+              <label for="raca">Raça</label>
+              <input type="text" id="raca" name="raca">
+            </div>
+          </div>
+          <div class="linha">
+            <div class="campo">
+              <label for="idade">Idade (anos)</label>
+              <input type="number" id="idade" name="idade" min="0">
+            </div>
+            <div class="campo">
+              <label for="peso">Peso (kg)</label>
+              <input type="number" id="peso" name="peso" min="0" step="0.1">
+            </div>
+          </div>
+          <div class="campo">
+            <label for="porte">Porte</label>
+            <select id="porte" name="porte">
+              <option value="">Selecione...</option>
+              <option value="pequeno">Pequeno (até 10kg)</option>
+              <option value="medio">Médio (10-25kg)</option>
+              <option value="grande">Grande (acima de 25kg)</option>
+            </select>
+          </div>
+
+          <div class="titulo-secao-formulario">Dados do Tutor</div>
+          <div class="linha">
+            <div class="campo">
+              <label for="tutor">Nome do tutor *</label>
+              <input type="text" id="tutor" name="tutor" required>
+            </div>
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email">
+            </div>
+          </div>
+          <div class="linha">
+            <div class="campo">
+              <label for="telefone">WhatsApp *</label>
+              <input type="tel" id="telefone" name="telefone" required>
+            </div>
+            <div class="campo">
+              <label for="whatsapp">Prefere WhatsApp?</label>
+              <div class="opcoes">
+                <label class="rotulo-opcao">
+                  <input type="radio" name="pref_whatsapp" value="sim" checked>
+                  Sim
+                </label>
+                <label class="rotulo-opcao">
+                  <input type="radio" name="pref_whatsapp" value="nao">
+                  Não
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="titulo-secao-formulario"> Interesse </div>
+          <div class="campo">
+            <label for="servico_interesse">Serviço de interesse</label>
+            <select id="servico_interesse" name="servico_interesse">
+              <option value="">Selecione...</option>
+              <option value="natacao">Natação</option>
+              <option value="agility">Agility</option>
+              <option value="socializacao">Socialização</option>
+              <option value="enriquecimento">Enriquecimento Ambiental</option>
+              <option value="musculacao">Musculação</option>
+              <option value="obediencia">Obediência</option>
+              <option value="premium">Pacote Premium</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label>Plano de interesse</label>
+            <div class="planos">
+              <label class="rotulo-plano">
+                <input type="radio" name="plano" value="avulso">
+                <span class="icone-plano">🎟️</span>
+                <span class="nome-plano">Avulso</span>
+                <span class="preco-plano">R$ 80</span>
+                <span class="frequencia-plano">por aula</span>
+              </label>
+              <label class="rotulo-plano">
+                <input type="radio" name="plano" value="mensal" checked>
+                <span class="icone-plano">📅</span>
+                <span class="nome-plano">Mensal</span>
+                <span class="preco-plano">R$ 350</span>
+                <span class="frequencia-plano">4 aulas/mês</span>
+              </label>
+              <label class="rotulo-plano">
+                <input type="radio" name="plano" value="premium">
+                <span class="icone-plano">⭐</span>
+                <span class="nome-plano">Premium</span>
+                <span class="preco-plano">R$ 600</span>
+                <span class="frequencia-plano">8 aulas/mês</span>
+              </label>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="observacoes">Observações</label>
+            <textarea id="observacoes" name="observacoes" placeholder="Conte mais sobre seu pet: necessidades especiais, comportamento, etc."></textarea>
+          </div>
+          <button type="submit" class="botao-enviar">Agendar Aula Experimental</button>
+        </form>
+        <div id="success">
+          <div class="big">🎉</div>
+          <h2>Agendamento Realizado!</h2>
+          <p>Em breve entraremos em contato pelo WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2024 <strong>Acãodemia Pet</strong>. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
